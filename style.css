@@ -35,6 +35,29 @@ h1{
     border-radius: 4px;
     margin: 10px 0 15px 0;
 }
+.weather-input input:focus{
+    padding: 0 16px;
+    border: 2px solid black;
+}
+.weather-input .prev-searches{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: -25px 0;
+}
+.weather-input .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-input .prev-results{
+    background: linear-gradient(rgb(98, 0, 255),rgba(4, 0, 255, 0.534));
+}
 .weather-data{
     width: 100%;
 }
