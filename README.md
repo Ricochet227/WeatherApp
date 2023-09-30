@@ -21,4 +21,4 @@ Clicking on any of your previous searches will display the weather of that searc
 ![PreviousSearches](./Assets/PreviousSearch.PNG)
 
 Dont worry! Refreshing the tab or even closing the browser wont lose your previous searches!
-Thanks for veiwing my page!
+Thanks for viewing my page!
