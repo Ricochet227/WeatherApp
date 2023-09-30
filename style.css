@@ -7,8 +7,6 @@
 }
 body{
     height: 100vh;
-    background-size: cover;
-    size: 100%;
     background: linear-gradient(rgb(64, 128, 248),rgb(197, 123, 123)); 
 }
 h1{
@@ -58,8 +56,11 @@ h1{
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
 }
-.current-weather h2{
+.current-weather h3{
     font-size: 1.7rem;
+}
+.current-weather .icon{
+    text-align: center;
 }
 .current-weather h4{
     margin-top: 12px;
@@ -74,9 +75,9 @@ h1{
     margin-top: -10px;
     text-transform: capitalize;
 }
-.days-forecast h2{
+.days-forecast h3{
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 20px -5px;
 }
 .weather-cards{
     display: flex;
@@ -93,5 +94,5 @@ h1{
 }
 .weather-cards .card img{
     max-width: 70px;
-    margin: 5px 0 -12px 0;
+    margin: -15px 0 -5px 0;
 }
