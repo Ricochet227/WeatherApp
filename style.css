@@ -55,17 +55,17 @@ h1{
     align-items: center;
     justify-content: center;
 }
+.weather-input .prev-searches{
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+    background:linear-gradient(rgba(64, 128, 248, 0),rgb(197, 123, 123));
+}
 .weather-input .prev-results{
+    border-radius: 5px;
     background: linear-gradient(rgb(98, 0, 255),rgba(4, 0, 255, 0.534));
 }
 .weather-data{
     width: 100%;
-}
-.weather-input .prev-results{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
 }
 .weather-input li{
     color: rgb(96, 236, 255);
@@ -83,7 +83,7 @@ h1{
     padding: 10px 0;
     cursor: pointer;
     border: none;
-    color: white;
+    color: rgb(96, 236, 255);
     border-radius: 4px;
     background: linear-gradient(rgb(98, 0, 255),rgba(4, 0, 255, 0.534));
     font-size: 1rem;
