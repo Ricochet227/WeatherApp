@@ -4,7 +4,7 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 const API_KEY = "002451757e9cc5352b12c6259bc48026";
 let previousSearches = [];
-
+http
 function createWeatherCard(cityName, weatherItem, index) {
     if (index === 0) {
       return `
@@ -80,7 +80,7 @@ function createWeatherCard(cityName, weatherItem, index) {
     const cityName = cityInput.value.trim();
     if (!cityName) return;
   
-    const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
     fetch(GEOCODING_API_URL)
       .then(res => res.json())
       .then(data => {
