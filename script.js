@@ -35,17 +35,20 @@ function createWeatherCard(cityName, weatherItem, index) {
   function renderPreviousSearches() {
     const previousSearchesEl = document.getElementById("previous-searches");
     previousSearchesEl.innerHTML = "";
-    previousSearches.forEach(search => {
+    const uniqueSearches = [...new Set(previousSearches)]; // Remove duplicates
+    uniqueSearches.forEach(search => {
       const listItemEl = document.createElement("li");
       listItemEl.textContent = search;
+      listItemEl.addEventListener("click", () => {
+        cityInput.value = search;
+        getCityCoordinates();
+      });
       previousSearchesEl.appendChild(listItemEl);
     });
   }
   
   function getWeatherDetails(cityName, lat, lon) {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-    previousSearches.push(cityName);
-    renderPreviousSearches();
     fetch(WEATHER_API_URL)
       .then(res => res.json())
       .then(data => {
@@ -86,8 +89,10 @@ function createWeatherCard(cityName, weatherItem, index) {
         }
   
         const { name, lat, lon } = data[0];
-        getWeatherDetails(name, lat, lon);
+        previousSearches.push(name);
         savePreviousSearches();
+        getWeatherDetails(name, lat, lon);
+        renderPreviousSearches();
       })
       .catch(() => {
         alert("An error occurred while fetching the coordinates!");
