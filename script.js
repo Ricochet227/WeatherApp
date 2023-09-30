@@ -44,7 +44,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`
     previousSearches.push(cityName);
     renderPreviousSearches();
-    
+    console.log(previousSearches)
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         const uniqueForecastDays = []
         const fiveDaysForecast = data.list.filter(forecast =>{

@@ -61,6 +61,23 @@ h1{
 .weather-data{
     width: 100%;
 }
+.weather-input .prev-results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+.weather-input li{
+    color: rgb(96, 236, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    list-style: none;
+    width: 100%;
+    padding: 10px 0;
+}
 .weather-input button{
     width: 100%;
     padding: 10px 0;
