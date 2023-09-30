@@ -122,13 +122,14 @@ h1{
 }
 .days-forecast h3{
     font-size: 1.5rem;
-    margin: 20px -5px;
+    margin: 20px -10px;
 }
 .weather-cards{
     display: flex;
     gap: 20px;
 }
 .weather-cards .card{
+    min-width: 213px;
     background: linear-gradient(rgb(98, 0, 255),rgb(4, 0, 255));
     list-style: none;
     color: rgb(96, 236, 255);
