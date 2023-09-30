@@ -74,3 +74,24 @@ h1{
     margin-top: -10px;
     text-transform: capitalize;
 }
+.days-forecast h2{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.weather-cards{
+    display: flex;
+    gap: 20px;
+}
+.weather-cards .card{
+    background: linear-gradient(rgb(98, 0, 255),rgb(4, 0, 255));
+    list-style: none;
+    color: rgb(96, 236, 255);
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    width: calc(100% / 5);
+}
+.weather-cards .card img{
+    max-width: 70px;
+    margin: 5px 0 -12px 0;
+}
