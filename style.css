@@ -78,7 +78,12 @@ h1{
     width: 100%;
     padding: 10px 0;
 }
-.weather-input button{
+
+.search-history li{
+    border-bottom: none;
+  }
+
+.weather-input .search-btn{
     width: 100%;
     padding: 10px 0;
     cursor: pointer;

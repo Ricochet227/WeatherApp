@@ -29,9 +29,15 @@ const createWeatherCard = (cityName, weatherItem, index) => {
     }
 
 }
+const storedSearches = localStorage.getItem('previousSearches');
 
 function renderPreviousSearches() {
+    const storedSearches = localStorage.getItem('previousSearches');
+    if (storedSearches) {
+        const previousSearches = JSON.parse(storedSearches);
+      }
     var previousSearchesEl = document.getElementById("previous-searches");
+    localStorage.setItem('previousSearches', JSON.stringify(previousSearches));
     previousSearchesEl.innerHTML = "";
     for (var i = 0; i < previousSearches.length; i++) {
       var listItemEl = document.createElement("li");
