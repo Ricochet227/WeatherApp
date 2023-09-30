@@ -1,3 +1,4 @@
+var previousSearches = [];
 const cityInput = document.querySelector(".city-input");
 const searchBtn = document.querySelector(".search-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
@@ -29,9 +30,21 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 
 }
 
+function renderPreviousSearches() {
+    var previousSearchesEl = document.getElementById("previous-searches");
+    previousSearchesEl.innerHTML = "";
+    for (var i = 0; i < previousSearches.length; i++) {
+      var listItemEl = document.createElement("li");
+      listItemEl.textContent = previousSearches[i];
+      previousSearchesEl.appendChild(listItemEl);
+    }
+  }
+
 const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`
-
+    previousSearches.push(cityName);
+    renderPreviousSearches();
+    
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         const uniqueForecastDays = []
         const fiveDaysForecast = data.list.filter(forecast =>{
